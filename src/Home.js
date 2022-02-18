@@ -16,14 +16,12 @@ const Home = () => {
         const author = e.target.children[0].textContent;
         const indQuote = data.quote.filter(quote => quote.author === author);
         setQuotes(indQuote);
-        console.log(indQuote);
         setAllAuotes("");
     }
     
     useEffect(() => {
         setTimeout(() => {
             setQuotes(data.quote);
-            console.log(data.quote);
             setIsLoading(false);
         }, 1000)
     }, []);
