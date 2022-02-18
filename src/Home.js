@@ -32,7 +32,6 @@ const Home = () => {
         <div className="home">
             <Navbar />
             {isLoading && <div className="loading"> <img src={loading} alt="loading..." /> </div>}
-            {error && <div>{ error }</div>}
             {quotes && allQuotes === "allquote" ? <QuoteDetails quotes={quotes.filter(quote => quote.id === randomNumber)} handleClick={handleClick} /> : null}
             {quotes && allQuotes === "" ? <QuoteList quotes={quotes} /> : null}
         </div>
