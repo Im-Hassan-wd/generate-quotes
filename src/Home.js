@@ -20,6 +20,9 @@ const Home = () => {
     }
     
     useEffect(() => {
+        // don't this on a real world project
+        // this is just to simualte a the ideal of making real request
+        // you are just causing your users to wait additional 1s when they don't need to
         setTimeout(() => {
             setQuotes(data.quote);
             setIsLoading(false);
